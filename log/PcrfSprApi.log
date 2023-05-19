@@ -1,0 +1,149 @@
+18:23:36,422 1    [pool-5-thread-1] ERROR freemarker.runtime  - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> message.SessionId  [in template "Templete.json" at line 6, column 14]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${message.SessionId}  [in template "Templete.json" at line 6, column 12]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134)
+	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481)
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401)
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370)
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:104)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63)
+	at freemarker.core.Environment.visit(Environment.java:335)
+	at freemarker.core.Environment.visit(Environment.java:341)
+	at freemarker.core.Environment.process(Environment.java:314)
+	at freemarker.template.Template.process(Template.java:383)
+	at tmt.pcrf.spr.radius.TransferToR.transform(TransferToR.java:77)
+	at tmt.pcrf.spr.radius.RadiusInterface.SendRadiusRequest(RadiusInterface.java:74)
+	at com.gx.grpc.service.HandleRadiusConn.InvokeRadReq(HandleRadiusConn.java:100)
+	at com.gx.grpc.service.GxServiceActions.InvokeRadReq(GxServiceActions.java:124)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.gx.grpc.service.SmActions$1.execute(SmActions.java:29)
+	at org.springframework.statemachine.state.AbstractState.executeAction(AbstractState.java:496)
+	at org.springframework.statemachine.state.AbstractState$3.run(AbstractState.java:525)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+18:25:36,437 1    [pool-5-thread-1] ERROR freemarker.runtime  - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> message.Session  [in template "Templete.json" at line 6, column 14]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${message.Session - Id}  [in template "Templete.json" at line 6, column 12]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134)
+	at freemarker.core.UnexpectedTypeException.newDescriptionBuilder(UnexpectedTypeException.java:85)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:48)
+	at freemarker.core.NonNumericalException.<init>(NonNumericalException.java:47)
+	at freemarker.core.Expression.modelToNumber(Expression.java:158)
+	at freemarker.core.Expression.evalToNumber(Expression.java:151)
+	at freemarker.core.ArithmeticExpression._eval(ArithmeticExpression.java:51)
+	at freemarker.core.Expression.eval(Expression.java:101)
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:104)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63)
+	at freemarker.core.Environment.visit(Environment.java:335)
+	at freemarker.core.Environment.visit(Environment.java:341)
+	at freemarker.core.Environment.process(Environment.java:314)
+	at freemarker.template.Template.process(Template.java:383)
+	at tmt.pcrf.spr.radius.TransferToR.transform(TransferToR.java:77)
+	at tmt.pcrf.spr.radius.RadiusInterface.SendRadiusRequest(RadiusInterface.java:74)
+	at com.gx.grpc.service.HandleRadiusConn.InvokeRadReq(HandleRadiusConn.java:100)
+	at com.gx.grpc.service.GxServiceActions.InvokeRadReq(GxServiceActions.java:124)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.gx.grpc.service.SmActions$1.execute(SmActions.java:29)
+	at org.springframework.statemachine.state.AbstractState.executeAction(AbstractState.java:496)
+	at org.springframework.statemachine.state.AbstractState$3.run(AbstractState.java:525)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+18:28:55,507 3    [pool-5-thread-1] ERROR freemarker.runtime  - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> message.Session  [in template "Templete.json" at line 6, column 14]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${message.Session - Id}  [in template "Templete.json" at line 6, column 12]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134)
+	at freemarker.core.UnexpectedTypeException.newDescriptionBuilder(UnexpectedTypeException.java:85)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:48)
+	at freemarker.core.NonNumericalException.<init>(NonNumericalException.java:47)
+	at freemarker.core.Expression.modelToNumber(Expression.java:158)
+	at freemarker.core.Expression.evalToNumber(Expression.java:151)
+	at freemarker.core.ArithmeticExpression._eval(ArithmeticExpression.java:51)
+	at freemarker.core.Expression.eval(Expression.java:101)
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:104)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63)
+	at freemarker.core.Environment.visit(Environment.java:335)
+	at freemarker.core.Environment.visit(Environment.java:341)
+	at freemarker.core.Environment.process(Environment.java:314)
+	at freemarker.template.Template.process(Template.java:383)
+	at tmt.pcrf.spr.radius.TransferToR.transform(TransferToR.java:77)
+	at tmt.pcrf.spr.radius.RadiusInterface.SendRadiusRequest(RadiusInterface.java:74)
+	at com.gx.grpc.service.HandleRadiusConn.InvokeRadReq(HandleRadiusConn.java:100)
+	at com.gx.grpc.service.GxServiceActions.InvokeRadReq(GxServiceActions.java:124)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.gx.grpc.service.SmActions$1.execute(SmActions.java:29)
+	at org.springframework.statemachine.state.AbstractState.executeAction(AbstractState.java:496)
+	at org.springframework.statemachine.state.AbstractState$3.run(AbstractState.java:525)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)

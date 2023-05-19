@@ -1,0 +1,36 @@
+{
+    "header": {
+        "commandCode":55,
+        "flag":240,
+        "application-id":4,
+        "hop-by-hop-id":"<string>",
+        "end-to-end-id":"<string>"
+    },
+    "message": {
+        "Session-Id": "seagull.mydomain.com;1096298391;1",
+        "Origin-Host": "seagull.mydomain.com",
+        "VendorSpecificApplicationId": {
+            "Vendor-Id": 10415,
+            "Auth-Application-Id": 4
+        },
+        "RAT-Type": "3G",
+        "subscriptionIds": [
+            {
+                "subscriptionIdType": "E164",
+                "subscriptionId": "9036808499"
+            },
+            {
+                "subscriptionIdType": "Generic",
+                "subscriptionId": ""
+            }
+        ],
+        
+        "Radius":{
+        	"UserName" : "john doe",
+        	"UserPassword" : "hunter2",
+        	"Accounting" : 1,
+        	"CallingStationId" : "61411000179",
+        	"VendorSpecific" : "3GPP"
+       } 
+   }
+}
